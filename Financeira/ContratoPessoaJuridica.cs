@@ -45,7 +45,6 @@ namespace Financeira
             base.RequestContractData();
             Console.WriteLine("Digite o CNPJ do Contratante: ");
             cnpj = Utilities.ReceivesAndValidatesCnpj();
-            Console.Clear();
             Console.WriteLine("Digite a Inscrição Estadual do Contratante: ");
             stateRegistration = Utilities.ReceivesAndValidatesStateRegistration();
             Console.Clear();
@@ -54,7 +53,7 @@ namespace Financeira
         public override void DisplaysInformation()
         {
             Console.WriteLine($"Contratante:{Contractor}");
-            Console.WriteLine($"Inscrição:{StateRegistration}");
+            Console.WriteLine($"CNPJ:{Cnpj}");
             Console.WriteLine($"Inscrição:{StateRegistration}");
             base.DisplaysInformation();
         }

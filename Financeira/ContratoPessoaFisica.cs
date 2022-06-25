@@ -58,16 +58,16 @@ namespace Financeira
         public override void RequestContractData()
         {
             base.RequestContractData();
-            Console.WriteLine("Digite o CPF do Contratante: ");
+            Console.WriteLine(Utilities.MsgInsertCpf);
             cpf = Utilities.ReceivesAndValidatesCpf();
-            Console.Clear();
-            Console.WriteLine("Digite a data de nascimento: ");
+            Console.WriteLine(Utilities.MsgInsertBirthDate);
             birthDate = Utilities.ReceivesAndValidatesDateTime();
             Console.Clear();
         }
 
         public override void DisplaysInformation()
         {
+            Console.Clear();
             Console.WriteLine($"Contratante:{Contractor}");
             Console.WriteLine($"Idade:{CalculateAge()}");
             base.DisplaysInformation();

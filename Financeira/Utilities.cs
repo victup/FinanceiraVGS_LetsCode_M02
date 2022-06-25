@@ -117,5 +117,33 @@ namespace Financeira
 
             return stateRegistration;
         }
+
+        public const string MenuRegisterOrQuery = @"
+----- ESCOLHA UMA OPÇÃO ------
+1. CADASTRAR NOVO CONTRATO
+2. CONSULTAR CONTRATOS
+3. SAIR
+";
+        public const string MenuPfOrPj = @"
+----- ESCOLHA O TIPO DE CONTRATO ------
+1. PESSOA FISICA
+2. PESSOA JURÍDICA
+";
+
+        public const string MsgWhoIsLooking = @"Digite o nome do contratante para exibir seus contratos: ";
+
+
+        public const string MsgContractorSearchFeedback = @"Não foram encontrados contratos com o nome digitado.";
+
+        public const string MsgInsertCpf = @"Digite o CPF do Contratante:";
+        public const string MsgInsertName = @"Digite o nome do contratante:";
+        public const string MsgInsertValue = @"Digite o valor do contrato:";
+        public const string MsgInsertDeadline = @"Digite o prazo do contrato em meses: ";
+        public const string MsgInsertBirthDate = @"Digite a data de nascimento: ";
+        public const string MsgFoundData = @"Esse são os dados encontrados: ";
     }
+
+    
+
 }
+

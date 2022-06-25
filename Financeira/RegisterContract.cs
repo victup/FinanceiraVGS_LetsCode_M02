@@ -12,14 +12,9 @@ namespace Financeira
             int option = 0;
 
         while(option != 3)
-            { 
-            
-            Console.WriteLine(@"
------ ESCOLHA UMA OPÇÃO ------
-1. CADASTRAR NOVO CONTRATO
-2. CONSULTAR CONTRATOS
-3. SAIR
-");
+            {
+                
+                Console.WriteLine(Utilities.MenuRegisterOrQuery);
 
             
             do
@@ -28,28 +23,26 @@ namespace Financeira
             }while(option != 1 && option != 2 && option != 3);
         if(option != 3)
             {
+                    
                 if (option == 1)// Cadastrar Contrato
                 {
                     Console.Clear();
-                    Console.WriteLine(@"
------ ESCOLHA O TIPO DE CONTRATO ------
-1. PESSOA FISICA
-2. PESSOA JURÍDICA
-");
+                    Console.WriteLine(Utilities.MenuPfOrPj);
 
-                    do
+                        do
                     {
                         option = Utilities.ReceivesAndValidatesIntegers();
                     } while (option != 1 && option != 2);
 
                     if (option == 1)
                     {
-
+                            
                             ContratoPessoaFisica aux = new ContratoPessoaFisica();
                             aux.RequestContractData();
                             ContratoPessoaFisica pf = new ContratoPessoaFisica(aux.contractor, aux.value, aux.deadline, aux.cpf, aux.birthDate);
                             ContractList.Add(pf);
-                            Console.WriteLine(pf.Contractor);
+                           
+
                     }
                     else
                     {
@@ -57,11 +50,14 @@ namespace Financeira
                             aux.RequestContractData();
                             ContratoPessoaJuridica pj = new ContratoPessoaJuridica(aux.contractor, aux.value, aux.deadline, aux.cnpj, aux.stateRegistration);
                             ContractList.Add(pj);
-                        }
-                }
+                            
+                     }
+                        continue;
+                    }
                 if(option == 2) //Consultar contrato
                     {
-                        Console.WriteLine("Digite o nome do da Pessoa ou Empresa");
+                        Console.Clear();
+                        Console.WriteLine(Utilities.MsgWhoIsLooking);
                         string seasearchContractName= Console.ReadLine();
                         int numberContract = 0;
                         Contrato contractFound = null;  
@@ -70,14 +66,14 @@ namespace Financeira
                             contractFound = contract;
                             if (contractFound.Contractor.ToString() == seasearchContractName)
                             {
-
+                                Console.WriteLine(Utilities.MsgFoundData);
                                 contractFound.DisplaysInformation();
                                 numberContract++;
                             }
                         }
                         if(numberContract == 0)
                         {
-                            Console.WriteLine("Não foram encontrados contratos com o nome digitado.");
+                            Console.WriteLine(Utilities.MsgContractorSearchFeedback);
                         }
                         
                     }

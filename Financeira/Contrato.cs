@@ -32,15 +32,12 @@ namespace Financeira
         public virtual void RequestContractData()
         {
             contractId = Guid.NewGuid();
-            Console.WriteLine("Digite o nome do contratante: ");
+            Console.WriteLine(Utilities.MsgInsertName);
             contractor = Utilities.ReceivesAndValidatesTextInput();
-            Console.Clear();
-            Console.WriteLine("Digite o valor do contrato: ");
+            Console.WriteLine(Utilities.MsgInsertValue);
             value = Utilities.ReceivesAndValidatesDecimalNumbers();
-            Console.Clear();
-            Console.WriteLine("Digite o prazo do contrato em meses: ");
+            Console.WriteLine(Utilities.MsgInsertDeadline);
             deadline = Utilities.ReceivesAndValidatesIntegers();
-            Console.Clear();
 
         }
 
