@@ -37,18 +37,18 @@ namespace Financeira
                     if (option == 1)
                     {
                             
-                            ContratoPessoaFisica aux = new ContratoPessoaFisica();
-                            aux.RequestContractData();
-                            ContratoPessoaFisica pf = new ContratoPessoaFisica(aux.contractor, aux.value, aux.deadline, aux.cpf, aux.birthDate);
+                            ContratoPessoaFisica pf = new ContratoPessoaFisica();
+                            pf.RequestContractData();
+                            pf = new ContratoPessoaFisica(pf.contractor, pf.value, pf.deadline, pf.cpf, pf.birthDate);
                             ContractList.Add(pf);
                            
 
                     }
                     else
                     {
-                            ContratoPessoaJuridica aux = new ContratoPessoaJuridica();
-                            aux.RequestContractData();
-                            ContratoPessoaJuridica pj = new ContratoPessoaJuridica(aux.contractor, aux.value, aux.deadline, aux.cnpj, aux.stateRegistration);
+                            ContratoPessoaJuridica pj = new ContratoPessoaJuridica();
+                            pj.RequestContractData();
+                            pj = new ContratoPessoaJuridica(pj.contractor, pj.value, pj.deadline, pj.cnpj, pj.stateRegistration);
                             ContractList.Add(pj);
                             
                      }
