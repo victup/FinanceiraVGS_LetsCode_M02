@@ -1,7 +1,7 @@
 # Financeira
 
 ## Sobre
-Este é o projeto que aplica conceiros de POO I, em aplicação Console utilizando C#, com base no seguinte enunciado:
+Este é um projeto avaliativo que aplica conceitos de POO I, em aplicação Console utilizando C#, com base no seguinte enunciado:
 
 1) Uma Financeira possui clientes pessoa física e pessoa jurídica. A Financeira precisa de um sistema para gerenciar os contratos de financiamento com seus clientes. Os contratos possuem número, nome do contratante, valor do contrato e prazo.
 
